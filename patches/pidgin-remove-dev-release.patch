@@ -1,0 +1,10 @@
+--- a/pidgin/data/im.pidgin.Pidgin3.metainfo.xml	2025-03-31 20:55:49.000000000 -0500
++++ b/pidgin/data/im.pidgin.Pidgin3.metainfo.xml	2025-03-31 21:51:33.884464939 -0500
+@@ -123,7 +123,6 @@
+   </content_rating>
+ 
+   <releases>
+-    <release version="3.0.0-experimental" date="2038-08-22" type="snapshot"/>
+     <release version="2.91.0" date="2025-03-31" type="development">
+       <url>https://sourceforge.net/projects/pidgin/files/Pidgin3/2.90.1/</url>
+     </release>
