@@ -1,6 +1,6 @@
 app-id: im.pidgin.Pidgin3
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: pidgin3
 finish-args:
@@ -55,6 +55,15 @@ modules:
       - type: archive
         url: https://ftp.gnu.org/gnu/libidn/libidn-1.42.tar.gz
         sha256: d6c199dcd806e4fe279360cb4b08349a0d39560ed548ffd1ccadda8cdecb4723
+  - name: libspelling-1
+    buildsystem: meson
+    config-opts:
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.6.tar.xz
+        sha256: 3248a9b5336ea2f727d2db912d2f0083accc0505ce707679b3d9b8266c0101f5
   - name: birb
     buildsystem: meson
     config-opts:
@@ -63,38 +72,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/birb/0.2.0/birb-0.2.0-dev.tar.xz/download
-        sha256: b4c24426a6c9aeb959a7a8d60d31def8e90cfb17680c90a0cc54d582789ecc38
-  - name: hasl
-    buildsystem: meson
-    config-opts:
-      - "-Ddoc=false"
-      - "--wrap-mode=nofallback"
-    sources:
-      - type: archive
-        archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/hasl/0.3.2/hasl-0.3.2.tar.xz/download
-        sha256: d67ba1ce29c6f1fcdc69dadae0bafe12cf60b9e8be80bb67b5f4f9e0db44c427
-  - name: ibis
-    buildsystem: meson
-    config-opts:
-      - "-Ddoc=false"
-      - "--wrap-mode=nofallback"
-    sources:
-      - type: archive
-        archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/ibis/0.10.2/ibis-0.10.2.tar.xz/download
-        sha256: 5a67b3089deac9632c908a71a2950aec12195a111c2ca1fe517c6f156bddd6a4
-  - name: xeme
-    buildsystem: meson
-    config-opts:
-      - "-Ddoc=false"
-      - "--wrap-mode=nofallback"
-    sources:
-      - type: archive
-        archive-type: tar-gzip
-        url: https://keep.imfreedom.org/xeme/xeme/archive/5d0707ab10a2.tar.gz
-        sha256: eabb0f88fdc54775e9aab63d277d0d0cf54c456ee09580d45bd516d1117088da
+        url: https://sourceforge.net/projects/pidgin/files/birb/0.3.1/birb-0.3.1.tar.xz/download
+        sha256: 70fa6462042f7d7c86a495eb93355fa14af057136b691e23838290bbcf57465c
   - name: gplugin
     buildsystem: meson
     config-opts:
@@ -107,6 +86,45 @@ modules:
         archive-type: tar-xz
         url: https://sourceforge.net/projects/pidgin/files/gplugin/0.44.2/gplugin-0.44.2.tar.xz/download
         sha256: aea244e1add9628b50ec042c54cf93803f4577f8f142678f09b91fd4c0b20f72
+  - name: hasl
+    buildsystem: meson
+    config-opts:
+      - "-Ddoc=false"
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://sourceforge.net/projects/pidgin/files/hasl/0.4.0/hasl-0.4.0.tar.xz/download
+        sha256: e78c244a259f13d43d230e9a8909bf0437a9466bef6757770a54a60c7c720036
+  - name: ibis
+    buildsystem: meson
+    config-opts:
+      - "-Ddoc=false"
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://sourceforge.net/projects/pidgin/files/ibis/0.13.1/ibis-0.13.1.tar.xz/download
+        sha256: 31da8257d75370f0b5c9f02c33af326fc1f4c71076533f07a977ab2102bbeca0
+  - name: seagull
+    buildsystem: meson
+    config-opts:
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://sourceforge.net/projects/pidgin/files/seagull/0.1.1/seagull-0.1.1.tar.xz
+        sha256: 499fc45b6a8539bc2293b362fec1c847fe25697355a0572f07ace3f359a38873
+  - name: xeme
+    buildsystem: meson
+    config-opts:
+      - "-Ddoc=false"
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-gzip
+        url: https://keep.imfreedom.org/xeme/xeme/archive/5d0707ab10a2.tar.gz
+        sha256: eabb0f88fdc54775e9aab63d277d0d0cf54c456ee09580d45bd516d1117088da
   - name: pidgin3
     buildsystem: meson
     config-opts:
@@ -115,8 +133,10 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.90.1/pidgin-2.90.1.tar.xz/download
-        sha256: 9ad2f9168258bedd9e4de4deb7948e4f2fa099715f2abad7a14494521cded3b6
+        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.91.0/pidgin3-2.91.0.tar.xz/download
+        sha256: cac17f48281b0e21ea3aba69167b1f1494cbe30f90e4b1de94bf685350692926
+      - type: patch
+        path: patches/pidgin-remove-dev-release.patch
     post-install:
       - install -d /app/plugins/pidgin-3
       - install -d /app/plugins/purple-3
