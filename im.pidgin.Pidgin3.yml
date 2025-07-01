@@ -72,8 +72,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/birb/0.3.1/birb-0.3.1.tar.xz/download
-        sha256: 70fa6462042f7d7c86a495eb93355fa14af057136b691e23838290bbcf57465c
+        url: https://sourceforge.net/projects/pidgin/files/birb/0.4.0/birb-0.4.0.tar.xz/download
+        sha256: 8fcb67559a6bddb305f59be5c9cb12eb35ec45a0a9a6e4184bb1df33d0028084
   - name: gplugin
     buildsystem: meson
     config-opts:
@@ -133,10 +133,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.91.0/pidgin3-2.91.0.tar.xz/download
-        sha256: cac17f48281b0e21ea3aba69167b1f1494cbe30f90e4b1de94bf685350692926
-      - type: patch
-        path: patches/pidgin-remove-dev-release.patch
+        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.92.1/pidgin3-2.92.1.tar.xz/download
+        sha256: 811efac91eb38b2337c4d860da8b444f8098e75538360a6fb3569d1c474081bb
     post-install:
       - install -d /app/plugins/pidgin-3
       - install -d /app/plugins/purple-3
