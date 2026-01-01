@@ -72,8 +72,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/birb/0.5.0/birb-0.5.0.tar.xz/download
-        sha256: e5d238610a0a94112ed9c4b09ee308b4c2456b6b3cebaa83f112f0596d326d4d
+        url: https://sourceforge.net/projects/pidgin/files/birb/0.6.1/birb-0.6.1.tar.xz/download
+        sha256: 53a5173bfd205f2c596022efb22f758e598c0dca385e74a5bf809a1a0c6b8621
   - name: gplugin
     buildsystem: meson
     config-opts:
@@ -104,8 +104,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/ibis/0.14.0/ibis-0.14.0.tar.xz/download
-        sha256: f48fa57e9fd2871bc22eb56b12adcaed4d5f2a76c0a41f70b85cc2db44a51395
+        url: https://sourceforge.net/projects/pidgin/files/ibis/0.15.0/ibis-0.15.0.tar.xz/download
+        sha256: 2dc7209f4aad52b0549ba829c3fbe057178f3a30fcf7d65238d02d1c3e2cbebe
   - name: seagull
     buildsystem: meson
     config-opts:
@@ -113,8 +113,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/seagull/0.5.0/seagull-0.5.0.tar.xz
-        sha256: 7979a9cdfa112cc98dd10379d6522decb116a46e426d53ca3ecb0c26bed1bf27
+        url: https://sourceforge.net/projects/pidgin/files/seagull/0.6.0/seagull-0.6.0.tar.xz
+        sha256: 4b25c030931e5ee6019b33dd469f021ec1ab6bbd050fc87ec57c47ef3e05b7ab
   - name: xeme
     buildsystem: meson
     config-opts:
@@ -133,8 +133,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.93.0/pidgin3-2.93.0.tar.xz/download
-        sha256: 0e23549e3f54ba1d78e6e8f04777581fe845eaca0dcf1dc45976f32fe9c17a7a
+        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.94.0/pidgin3-2.94.0.tar.xz/download
+        sha256: ecb87522258f25e8f9b844301debb8371cbd652aa4b2792bd5a0d03c09cc77c6
     post-install:
       - install -d /app/plugins/pidgin-3
       - install -d /app/plugins/purple-3
