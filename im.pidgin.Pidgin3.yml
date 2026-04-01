@@ -1,6 +1,6 @@
 app-id: im.pidgin.Pidgin3
 runtime: org.gnome.Platform
-runtime-version: '48'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: pidgin3
 finish-args:
@@ -62,8 +62,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.6.tar.xz
-        sha256: 3248a9b5336ea2f727d2db912d2f0083accc0505ce707679b3d9b8266c0101f5
+        url: https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.10.tar.xz
+        sha256: 56e3f01a3a18b575beea4c34349f99cdaba316e1f7c271b1231f7bcf5d9af73b
   - name: birb
     buildsystem: meson
     config-opts:
@@ -72,8 +72,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/birb/0.6.1/birb-0.6.1.tar.xz/download
-        sha256: 53a5173bfd205f2c596022efb22f758e598c0dca385e74a5bf809a1a0c6b8621
+        url: https://sourceforge.net/projects/pidgin/files/birb/0.7.1/birb-0.7.1.tar.xz/download
+        sha256: ac1f588be2874e1b757f98681d3dba4067db5a820c5dd682a0fd64c4e720d19b
   - name: gplugin
     buildsystem: meson
     config-opts:
@@ -113,8 +113,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/seagull/0.6.0/seagull-0.6.0.tar.xz
-        sha256: 4b25c030931e5ee6019b33dd469f021ec1ab6bbd050fc87ec57c47ef3e05b7ab
+        url: https://sourceforge.net/projects/pidgin/files/seagull/0.8.1/seagull-0.8.1.tar.xz
+        sha256: b9b3c0d3ec5e0897ca672f4a7b995a58529ca103dcfa6a591bed82ca0557c7d4
   - name: xeme
     buildsystem: meson
     config-opts:
@@ -133,8 +133,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.94.0/pidgin3-2.94.0.tar.xz/download
-        sha256: ecb87522258f25e8f9b844301debb8371cbd652aa4b2792bd5a0d03c09cc77c6
+        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.95.0/pidgin3-2.95.0.tar.xz/download
+        sha256: 567b0f01e614414ec7e01758d980a3c632b4b4c8dc857bd0d40979542ec33fbe
     post-install:
       - install -d /app/plugins/pidgin-3
       - install -d /app/plugins/purple-3
