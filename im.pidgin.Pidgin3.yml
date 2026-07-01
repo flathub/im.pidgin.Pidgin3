@@ -45,6 +45,16 @@ add-extensions:
     subdirectories: true
 
 modules:
+  - name: qrencode
+    buildsystem: autotools
+    cleanup:
+      - /lib/*.la
+    config-opts:
+      - "--disable-static"
+    sources:
+      - type: archive
+        url: https://github.com/fukuchi/libqrencode/archive/refs/tags/v4.1.1.tar.gz
+        sha256: 5385bc1b8c2f20f3b91d258bf8ccc8cf62023935df2d2676b5b67049f31a049c
   - name: libidn
     buildsystem: autotools
     cleanup:
@@ -55,15 +65,6 @@ modules:
       - type: archive
         url: https://ftp.gnu.org/gnu/libidn/libidn-1.42.tar.gz
         sha256: d6c199dcd806e4fe279360cb4b08349a0d39560ed548ffd1ccadda8cdecb4723
-  - name: libspelling-1
-    buildsystem: meson
-    config-opts:
-      - "--wrap-mode=nofallback"
-    sources:
-      - type: archive
-        archive-type: tar-xz
-        url: https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.10.tar.xz
-        sha256: 56e3f01a3a18b575beea4c34349f99cdaba316e1f7c271b1231f7bcf5d9af73b
   - name: birb
     buildsystem: meson
     config-opts:
@@ -74,18 +75,6 @@ modules:
         archive-type: tar-xz
         url: https://sourceforge.net/projects/pidgin/files/birb/0.7.1/birb-0.7.1.tar.xz/download
         sha256: ac1f588be2874e1b757f98681d3dba4067db5a820c5dd682a0fd64c4e720d19b
-  - name: gplugin
-    buildsystem: meson
-    config-opts:
-      - "-Ddoc=false"
-      - "-Dlua=false"
-      - "-Dpython3=false"
-      - "--wrap-mode=nofallback"
-    sources:
-      - type: archive
-        archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/gplugin/0.44.2/gplugin-0.44.2.tar.xz/download
-        sha256: aea244e1add9628b50ec042c54cf93803f4577f8f142678f09b91fd4c0b20f72
   - name: hasl
     buildsystem: meson
     config-opts:
@@ -104,17 +93,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/ibis/0.15.0/ibis-0.15.0.tar.xz/download
-        sha256: 2dc7209f4aad52b0549ba829c3fbe057178f3a30fcf7d65238d02d1c3e2cbebe
-  - name: seagull
-    buildsystem: meson
-    config-opts:
-      - "--wrap-mode=nofallback"
-    sources:
-      - type: archive
-        archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/seagull/0.8.1/seagull-0.8.1.tar.xz
-        sha256: b9b3c0d3ec5e0897ca672f4a7b995a58529ca103dcfa6a591bed82ca0557c7d4
+        url: https://sourceforge.net/projects/pidgin/files/ibis/0.16.0/ibis-0.16.0.tar.xz/download
+        sha256: ea9ee73aa89756243a8ffb8d32431dee5d388a971bc34f8a96d0b1d7e7b9d6c1
   - name: xeme
     buildsystem: meson
     config-opts:
@@ -125,6 +105,36 @@ modules:
         archive-type: tar-gzip
         url: https://keep.imfreedom.org/xeme/xeme/archive/5d0707ab10a2.tar.gz
         sha256: eabb0f88fdc54775e9aab63d277d0d0cf54c456ee09580d45bd516d1117088da
+  - name: gplugin
+    buildsystem: meson
+    config-opts:
+      - "-Ddoc=false"
+      - "-Dlua=false"
+      - "-Dpython3=false"
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://sourceforge.net/projects/pidgin/files/gplugin/0.44.2/gplugin-0.44.2.tar.xz/download
+        sha256: aea244e1add9628b50ec042c54cf93803f4577f8f142678f09b91fd4c0b20f72
+  - name: seagull
+    buildsystem: meson
+    config-opts:
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://sourceforge.net/projects/pidgin/files/seagull/0.8.1/seagull-0.8.1.tar.xz
+        sha256: b9b3c0d3ec5e0897ca672f4a7b995a58529ca103dcfa6a591bed82ca0557c7d4
+  - name: libspelling-1
+    buildsystem: meson
+    config-opts:
+      - "--wrap-mode=nofallback"
+    sources:
+      - type: archive
+        archive-type: tar-xz
+        url: https://download.gnome.org/sources/libspelling/0.4/libspelling-0.4.10.tar.xz
+        sha256: 56e3f01a3a18b575beea4c34349f99cdaba316e1f7c271b1231f7bcf5d9af73b
   - name: pidgin3
     buildsystem: meson
     config-opts:
@@ -133,8 +143,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.95.0/pidgin3-2.95.0.tar.xz/download
-        sha256: 567b0f01e614414ec7e01758d980a3c632b4b4c8dc857bd0d40979542ec33fbe
+        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.96.0/pidgin3-2.96.0.tar.xz/download
+        sha256: f44a282246dd74910810a00f6cce8914122220cf79a808d9ac1975f75fa3e00a
     post-install:
       - install -d /app/plugins/pidgin-3
       - install -d /app/plugins/purple-3
