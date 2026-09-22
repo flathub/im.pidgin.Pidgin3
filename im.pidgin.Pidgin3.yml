@@ -19,9 +19,6 @@ finish-args:
   - "--talk-name=org.a11y.Bus"
   # libsecret plugin
   - "--talk-name=org.freedesktop.secrets"
-  # kwallet plugin
-  - "--talk-name=org.kde.kwalletd5"
-  - "--talk-name=org.kde.kwalletd6"
   # Bonjour
   - "--system-talk-name=org.freedesktop.Avahi"
   # Plugin Paths
