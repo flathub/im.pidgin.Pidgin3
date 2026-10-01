@@ -52,16 +52,6 @@ modules:
       - type: archive
         url: https://github.com/fukuchi/libqrencode/archive/refs/tags/v4.1.1.tar.gz
         sha256: 5385bc1b8c2f20f3b91d258bf8ccc8cf62023935df2d2676b5b67049f31a049c
-  - name: libidn
-    buildsystem: autotools
-    cleanup:
-      - /lib/*.la
-    config-opts:
-      - "--disable-static"
-    sources:
-      - type: archive
-        url: https://ftp.gnu.org/gnu/libidn/libidn-1.42.tar.gz
-        sha256: d6c199dcd806e4fe279360cb4b08349a0d39560ed548ffd1ccadda8cdecb4723
   - name: birb
     buildsystem: meson
     config-opts:
@@ -70,8 +60,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/birb/0.7.1/birb-0.7.1.tar.xz/download
-        sha256: ac1f588be2874e1b757f98681d3dba4067db5a820c5dd682a0fd64c4e720d19b
+        url: https://fastly.imfreedom.org/birb/0.11.0/birb-0.11.0.tar.xz
+        sha256: 9366ee65d4a0e28da60955acc3618f63672e8f3f2229296f8af14d6459ca3741
   - name: hasl
     buildsystem: meson
     config-opts:
@@ -80,8 +70,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/hasl/0.4.0/hasl-0.4.0.tar.xz/download
-        sha256: e78c244a259f13d43d230e9a8909bf0437a9466bef6757770a54a60c7c720036
+        url: https://fastly.imfreedom.org/hasl/0.6.0/hasl-0.6.0.tar.xz
+        sha256: dd892e8ac5d61b64031e75a7001ecb8916b99ba4efc78c3cb123cd59a0c3bcbb
   - name: ibis
     buildsystem: meson
     config-opts:
@@ -90,8 +80,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/ibis/0.16.0/ibis-0.16.0.tar.xz/download
-        sha256: ea9ee73aa89756243a8ffb8d32431dee5d388a971bc34f8a96d0b1d7e7b9d6c1
+        url: https://fastly.imfreedom.org/ibis/0.16.1/ibis-0.16.1.tar.xz
+        sha256: cdd2db49f9acf60017a08b0771edce4693cf722a7aef65606d1324b2cb530e0d
   - name: xeme
     buildsystem: meson
     config-opts:
@@ -112,7 +102,7 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/gplugin/0.44.2/gplugin-0.44.2.tar.xz/download
+        url: https://fastly.imfreedom.org/gplugin/0.44.2/gplugin-0.44.2.tar.xz
         sha256: aea244e1add9628b50ec042c54cf93803f4577f8f142678f09b91fd4c0b20f72
   - name: seagull
     buildsystem: meson
@@ -121,8 +111,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/seagull/0.8.1/seagull-0.8.1.tar.xz
-        sha256: b9b3c0d3ec5e0897ca672f4a7b995a58529ca103dcfa6a591bed82ca0557c7d4
+        url: https://fastly.imfreedom.org/seagull/0.8.2/seagull-0.8.2.tar.xz
+        sha256: ad676236083858b3adab61eca836b4f49b847509a1b4c4626b404e5034e3a6ee
   - name: libspelling-1
     buildsystem: meson
     config-opts:
@@ -140,9 +130,12 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://sourceforge.net/projects/pidgin/files/Pidgin3/2.96.0/pidgin3-2.96.0.tar.xz/download
-        sha256: f44a282246dd74910810a00f6cce8914122220cf79a808d9ac1975f75fa3e00a
+        url: https://fastly.imfreedom.org/Pidgin3/2.97.0/pidgin3-2.97.0.tar.xz
+        sha256: 49fca398ead172d31bfe4efacd85a6b03916b3212104d2b1cc047654d69e6d1e
+      - type: file
+        path: im.pidgin.Pidgin3.metainfo.xml
     post-install:
       - install -d /app/plugins/pidgin-3
       - install -d /app/plugins/purple-3
+      - install -Dm644 ../im.pidgin.Pidgin3.metainfo.xml /app/share/metainfo/im.pidgin.Pidgin3.metainfo.xml
 
