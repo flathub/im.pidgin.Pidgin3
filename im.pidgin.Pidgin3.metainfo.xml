@@ -166,7 +166,7 @@
 
   <releases>
     <release version="2.98.0" date="2026-10-29" type="development">
-      <url>https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-98-0-has-been-released/</url>
+      <url>https://discourse.imfreedom.org/t/pidgin-3-0-alpha-4-2-98-0-has-been-released/</url>
       <artifacts>
         <artifact>
           <location>https://fastly.imfreedom.org/Pidgin3/2.98.0/pidgin3-2.98.0.tar.xz</location>
