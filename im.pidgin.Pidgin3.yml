@@ -80,8 +80,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://fastly.imfreedom.org/ibis/0.16.1/ibis-0.16.1.tar.xz
-        sha256: cdd2db49f9acf60017a08b0771edce4693cf722a7aef65606d1324b2cb530e0d
+        url: https://fastly.imfreedom.org/ibis/0.20.0/ibis-0.20.0.tar.xz
+        sha256: 9b5c720e6eae889b4f02d790980398e2e5cde7c10d8e980d16951199062e8ecf
   - name: xeme
     buildsystem: meson
     config-opts:
@@ -130,8 +130,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar-xz
-        url: https://fastly.imfreedom.org/Pidgin3/2.97.0/pidgin3-2.97.0.tar.xz
-        sha256: 49fca398ead172d31bfe4efacd85a6b03916b3212104d2b1cc047654d69e6d1e
+        url: https://fastly.imfreedom.org/Pidgin3/2.98.0/pidgin3-2.98.0.tar.xz
+        sha256: 62a5ece9dcf82650eba6a10d0804eeb04ca0e5f5c494e04f6bbc16036d704f30
       - type: file
         path: im.pidgin.Pidgin3.metainfo.xml
     post-install:

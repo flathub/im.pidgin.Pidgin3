@@ -38,8 +38,8 @@
   </description>
 
   <branding>
-    <color type="primary" scheme_preference="light">#794a85</color>
-    <color type="primary" scheme_preference="dark">#e15694</color>
+    <color type="primary" scheme_preference="light">#ff7996</color>
+    <color type="primary" scheme_preference="dark">#4e0068</color>
   </branding>
 
   <keywords>
@@ -75,72 +75,76 @@
 
   <screenshots>
     <screenshot style="gnome" type="default">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/contacts-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/contacts-light.png</image>
       <caption>Contact list</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/conversation-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/conversation-light.png</image>
       <caption>Conversation</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/account-manager-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/account-manager-light.png</image>
       <caption>Account Manager</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/notifications-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/notifications-light.png</image>
       <caption>Notifications</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/plugin-dialog-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/plugin-dialog-light.png</image>
       <caption>Plugins</caption>
     </screenshot>
     <screenshot style="gnome:dark" type="default">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/contacts-dark.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/contacts-dark.png</image>
       <caption>Contact list</caption>
     </screenshot>
     <screenshot style="gnome:dark">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/conversation-dark.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/conversation-dark.png</image>
       <caption>Conversation</caption>
     </screenshot>
     <screenshot style="gnome:dark">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/account-manager-dark.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/account-manager-dark.png</image>
       <caption>Account Manager</caption>
     </screenshot>
     <screenshot style="gnome:dark">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/notifications-dark.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/notifications-dark.png</image>
       <caption>Notifications</caption>
     </screenshot>
     <screenshot style="gnome:dark">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/plugin-dialog-dark.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/plugin-dialog-dark.png</image>
       <caption>Plugins</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-appearance-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-appearance-light.png</image>
       <caption>Appearance Preferences</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-privacy-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-privacy-light.png</image>
       <caption>Privacy Preferences</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-notifications-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-notifications-light.png</image>
       <caption>Notification Preferences</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-network-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-network-light.png</image>
       <caption>Network Preferences</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-idle-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-idle-light.png</image>
       <caption>Idle Preferences</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-credentials-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-credentials-light.png</image>
       <caption>Credential Preferences</caption>
     </screenshot>
     <screenshot style="gnome">
-      <image>https://fastly.imfreedom.org/Pidgin3/2.97.0/screenshots/preferences-development-light.png</image>
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-development-light.png</image>
       <caption>Development Preferences</caption>
+    </screenshot>
+    <screenshot style="gnome">
+      <image>https://fastly.imfreedom.org/Pidgin3/2.98.0/screenshots/preferences-search-light.png</image>
+      <caption>Searchable Preferences</caption>
     </screenshot>
   </screenshots>
 
@@ -161,6 +165,15 @@
   </content_rating>
 
   <releases>
+    <release version="2.98.0" date="2026-10-29" type="development">
+      <url>https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-98-0-has-been-released/</url>
+      <artifacts>
+        <artifact>
+          <location>https://fastly.imfreedom.org/Pidgin3/2.98.0/pidgin3-2.98.0.tar.xz</location>
+          <checksum type="sha256">62a5ece9dcf82650eba6a10d0804eeb04ca0e5f5c494e04f6bbc16036d704f30</checksum>
+        </artifact>
+      </artifacts>
+    </release>
     <release version="2.97.0" date="2026-09-30" type="development">
       <url>https://discourse.imfreedom.org/t/pidgin-3-0-alpha-3-2-97-0-has-been-released/</url>
       <artifacts>
